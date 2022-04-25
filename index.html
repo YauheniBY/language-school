@@ -24,12 +24,14 @@
                 </div>
                 <div class="header__info">
                     <button class="header__info-btn desktop openform" data-status="firstBtn">Заказать звонок</button>
-                    <button class="header__info-btn header__info-btn_color openform desktop visually-hidden">Заказать консультацию</button>
-                    <button class="header__info-btn header__info-btn_color openform desktop visually-hidden">Записаться на бесплатный урок</button>
+                    <button class="header__info-btn header__info-btn_color openform">Заказать консультацию</button>
+                    <button class="header__info-btn header__info-btn_color openform">Записаться на бесплатный урок</button>
                     <span class="header__info-time">Время работы: Ежедневно с 10.00 до 22.00</span>
                 </div>
                 <div class="header__phones">
-                    <a href="tel:+375259369202" class="header__phones-link"><span class="header__phones-link-number"><img src="./img/icons/phone_icon_2.png" alt="Позвонить" class="header__phones-link-img mobile visually-hidden"> +375 25 936-92-02</span></a>
+                    
+                    <a href="tel:+375259369202" class="header__phones-link"><span class="header__phones-link-number"> +375 25 936-92-02</span></a>
+                    <a href="tel:+375259369202" class=""><img src="./img/icons/phone_icon_2.png" alt="Позвонить" class="header__phones-link-img"></a>
                     <a href="tel:+375232216875" class="header__phones-link">☎ +375 232 21 68 75</a>
                 </div>
                 <div class="header__menu menu">
@@ -392,6 +394,20 @@
             <a href="tel:+375259369202" class="contacts__phone">+375 25 936-92-02</a>
             <a href="tel:+375232216875" class="contacts__phone">+375 232 21 68 75</a>
             <button class="contacts__btn btn_type3 openform">Записаться на бесплатный урок</button>
+        </section>        
+        <section class="reviews blue">
+            <div class="container">
+                <h3 class="reviews__headtext headtext-h2 bold">Студенты The English Company о школе и результатах.</h3>
+                <div class="reviews__text headtext-h3">Смотрите короткое видео</div>
+                <div class="reviews__video-box">
+                    <video class="reviews__video" poster="./img/students/poster_1.jpg">                
+                        <source src="./video/otzyvy.mp4" type="video/mp4">
+                        Тег video не поддерживается вашим браузером. <a href="https://www.youtube.com/watch?v=G_Vpe4Fm324">Скачайте видео</a>                
+                    </video>                
+                </div>
+                <div class="reviews__text headtext-h4_extra">Длительность: 3 мин. Содержание: 10 видео отзывов.</div>
+
+            </div>
         </section>
         <section class="teachers">
             <div class="container">
@@ -407,20 +423,6 @@
                 <img src="./img/students/Teacher_5.jpg" alt="Фото учителя" class="teachers__photo">
             </div>
 
-        </section>
-        <section class="reviews blue">
-            <div class="container">
-                <h3 class="reviews__headtext headtext-h2 bold">Студенты The English Company о школе и результатах.</h3>
-                <div class="reviews__text headtext-h3">Смотрите короткое видео</div>
-                <div class="reviews__video-box">
-                    <video class="reviews__video" poster="./img/students/poster_1.jpg">                
-                        <source src="./video/otzyvy.mp4" type="video/mp4">
-                        Тег video не поддерживается вашим браузером. <a href="https://www.youtube.com/watch?v=G_Vpe4Fm324">Скачайте видео</a>                
-                    </video>                
-                </div>
-                <div class="reviews__text headtext-h4_extra">Длительность: 3 мин. Содержание: 10 видео отзывов.</div>
-
-            </div>
         </section>
         <section class="corp">
             <div class="container">
@@ -439,8 +441,12 @@
         <section class="quest container">
             <h3 class="corp__headtext headtext-h2">У вас есть вопрос?</h3>
             <form action="#" class="quest__form">
-                <input type="text" class="quest__input" placeholder="Укадите номер для звонка">
+                <input type="text" class="quest__input" placeholder="Укадите номер для звонка">                
                 <button type="submit" class="quest__btn-submit">Отправить</button>
+                <div class="quest__privacy">
+                    <input type="checkbox" name="policy" class="quest__checkbox _req" id="quest__checkbox" checked>
+                    <label for="quest__checkbox" class="quest__policy-label">Я согласен(а) с условиями передачи информации</label>
+                </div>
             </form>
         </section>
         <section class="map blue"> 
@@ -461,7 +467,7 @@
                     <button class="map__btn btn_type4 openform">Записаться на тестирование*</button> 
                     <div class="map__desc">* Устное собеседование проводится для подбора группы точно по вашему уровню. Для определения уровня английского, запишитесь на встречу с нашим преподавателем.</div>                   
                     <div class="map__desc bold">Режим работы школы:</div>
-                    <div class="map__desc"><span class="bold"> Пн - Пт:</span> 09.30 - 22.00  <span class="bold">Сб, Bc:</span>Сб - Bc: 10.00 - 19.00</div>
+                    <div class="map__desc"><span class="bold"> Пн - Пт:</span> 09.30 - 22.00  / <span class="bold">Сб, Bc:</span> 10.00 - 19.00</div>
                 </div>
             </div>
         </section>
@@ -483,11 +489,14 @@
                 <h6 class="visually-hidden">На главную</h6>
                 <button class="btn__top"><img class="btn__img" src="./img/icons/uparrow.svg" alt="наверх"></button>
             </section>
+            <section class="callback callback-pulse openform">
+                <h6 class="visually-hidden">Связаться</h6>
+                <img src="./img/icons/callBack.png" alt="кнопка обратной связи" class="callback__img">
+            </section>
             <section class="mainform">
                 <h6 class="visually-hidden">Заказ звонка</h6>
                 <form action="#" class="mainform__box">
                     <h4 class="mainform__title">Заказ звонка</h4>
-                    <div class="mainform__desc">Оставьте заявку на консультацию</div>
                     <input type="tel" class="mainform__input  tel _req" placeholder="Ваш телефон" name="phone">
                     <input type="hidden" name="city" value="ГОМЕЛЬ">
                     <input type="hidden" name="sort" value="Курсы английского">

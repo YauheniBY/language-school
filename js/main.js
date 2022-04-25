@@ -56,6 +56,8 @@ var $openforms = document.querySelectorAll('.openform'),
     $form = document.querySelector('.mainform'),
     $body = document.querySelector('body'),
     $btnTop = document.querySelector('.btn__top');
+    $callbackBtn = document.querySelector('.callback');
+    $header = document.querySelector('.header__container');
 
 //to top-button click
 
@@ -79,10 +81,14 @@ function hatActive() {
     if (scrollTop <= 800 && ($btnTop.classList.contains('btn__top_active'))) {
         
         $btnTop.classList.remove('btn__top_active');
+        $callbackBtn.classList.remove('callback_active');
+        $header.classList.remove('header__container_active');
 
     } else if(scrollTop > 800 && !($btnTop.classList.contains('btn__top_active'))) {
 
-        $btnTop.classList.add('btn__top_active'); 
+        $btnTop.classList.add('btn__top_active');
+        $callbackBtn.classList.add('callback_active');
+        $header.classList.add('header__container_active'); 
 
               
     }

@@ -76,7 +76,7 @@
         text-align: left;
         font-size: 20px;
 
-        @include mobile {
+        @include tablet {
             margin: 30px 15px 30px 90px;
             width: 75%;
         }

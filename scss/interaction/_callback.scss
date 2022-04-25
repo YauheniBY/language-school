@@ -1,16 +1,29 @@
 .callback {
-    display: block;
-    background: rgb(25, 187, 155);
+    display: none;
+    background: $green2;
     padding: 5px;
     position: fixed;
     bottom: 50px;
     right: 50px;
     border-radius: 50%;
+    filter: brightness(1.1);
+    @include mobile {
+        bottom: 25px;
+        right: 25px;
+    }
+    
+    &_active {
+        display: block;
+    }
+
+    &:hover {
+        filter: brightness(1);
+    }
 
 
     &-pulse {
         cursor: pointer;
-        box-shadow: 0 0 0 rgba(25, 187, 155, 0.4);
+        box-shadow: 0 0 0 $green3;
         animation: pulse 10s infinite;
     }
 

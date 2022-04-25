@@ -48,8 +48,9 @@
         font-size: 25px;
         text-align: center;
         margin: 0 0 20px 0;
-        color: $grey4;
+        color: $blue-darker;
         font-weight: 600;
+        text-transform: uppercase;
     }
 
     &__desc {
@@ -59,7 +60,7 @@
         line-height: 15px;
         text-align: center;
         margin: 0 auto 20px auto;
-        color: $grey1;
+        color: $grey3;
     }
 
     &__input {
@@ -67,16 +68,26 @@
         max-width: 300px;
         border-radius: 25px;
         padding: 10px 8px;
-        @include font(16px, 18px, 700);
-        color: $black;
+        font-size: 18px;
+        line-height: 18px;
+        font-weight: 600;
+        color: $grey3;
         text-align: center;
-        border: 1px solid $grey4;                      
+        border: 2px solid $grey1;                      
         margin: 0 auto 30px auto;
         text-transform: uppercase;
     }
+
     &__input:focus {
-        border: 1px solid $grey3;
+        border: 2px solid $grey5;
         outline:none;
+    }
+
+    &__input::placeholder {
+        font-weight: 300;
+        text-transform: none;
+        color: $grey1;
+        font-size: 20px;
     }
 
     &__btn {
@@ -100,7 +111,7 @@
 
     &__privacy {
         display: block;
-        width: 90%;
+        width: 99%;
         margin: 0 auto;
         text-align: center;
     }
@@ -112,7 +123,7 @@
     &__policy-label {
         position: relative;
         width: 100%;
-        color: $grey4;
+        color: $blue-darker;
         margin: 0 0 0 35px;        
         @include font(14px, 17px, 400);
     }
@@ -122,9 +133,9 @@
         width: 10px;
         height: 10px;
         position: absolute;
-        top: 6px;
+        top: 3px;
         left: -20px;
-        border: 1px solid $blue-light;
+        border: 1px solid $grey5;
         border-radius: 3px;
     }
 
@@ -133,16 +144,18 @@
     }
 
     &__checkbox:checked+&__policy-label:after {
-        content: '';
+        content: "✓";
         width: 16px;
         height: 16px;
         position: absolute;
-        top: 2px;
-        left: -19px;
-        background-image: url('../img/icons/mark.png');
+        top: -2px;
+        left: -21px;
         background-repeat: no-repeat;
         background-size: 14px 14px;
         z-index: 1;
+        color: $grey5;
+        font-weight: 600;
+        font-size: 18px;
     }
 
     &__checkbox.error &__policy-label:before {

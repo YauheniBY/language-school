@@ -17,11 +17,21 @@
         align-items: flex-start;
         background-color: $blue;
         min-height: 70px;
+        background: linear-gradient(45deg,$blue 0%,$blue-light 100%);
+        transition: .5s;
 
         @include tablet {
             justify-content: space-around;
             padding: 0 17px;
         }
+    }
+
+    &__container_active {
+        background: $white;
+        transition: .5s;
+        box-shadow: 0 10px 10px $shadow2;
+        justify-content: space-between;
+        padding: 0 30px;
     }
 
     &__logo, &__info, &__phones {
@@ -39,6 +49,10 @@
         @include tablet {
             display: none;
         }
+    }
+
+    &__container_active &__logo {
+        display: none;
     }
 
     &__logo-link {        
@@ -83,15 +97,25 @@
         margin: auto 0;
     }
 
+    
+
+    &__container_active &__info {        
+        align-items:center;
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 65%;
+    }
+
     &__info-btn {
         color: $white;
         border: 1px solid $white;
         border-radius: 20px;
         font-size: 12px;
         line-height: 15px;
-        padding: 6px 10px;
+        padding: 6px 15px;
         background-color: $blue;
         text-decoration: none;
+        font-family: 'Roboto', Arial, Helvetica, sans-serif;
 
         @include tablet {
             background-color: $yellow;
@@ -105,7 +129,54 @@
 
     &__info-btn:hover{
         cursor: pointer;
-        text-decoration: none;
+        text-decoration: none;        
+    }
+
+    &__container_active &__info-btn {
+        font-size: 14px;
+        background: $yellow-dark;
+        padding: 12px 15px;
+        border: none;
+        border-radius: 28px;
+        color: $blue-darker;
+        min-width: 250px;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 600;
+        display: none;
+        margin-right: 10px;
+
+        @include tablet {
+            display: block;
+            font-size: 14px;
+            padding: 8px 10px;
+            min-width: 200px;
+        }
+    }
+
+    &__container_active &__info-btn:hover {
+        background: $yellow;
+    }
+
+    &__info-btn_color {
+        position: fixed;
+        transform: scale(0);
+    }
+
+    &__container_active &__info-btn_color {
+        position: relative;
+        transform: scale(1);
+        display: block;
+
+        @include desktop {
+            font-size: 12px;
+        }
+
+        @include tablet {
+            display: none; 
+            position: fixed;
+            transform: scale(0);         
+        }
     }
 
     &__info-time {
@@ -120,17 +191,40 @@
         }
     }
 
+    &__container_active &__info-time {
+        display: none;
+    }
+
+    
+
     &__phones {
         align-items:flex-end;
         flex-direction: column;
         justify-content: center;
         margin: auto 0;
-        min-height: 100px;
+        min-height: 100px;        
 
         @include tablet {
             width: 60%;
             min-height: 70px;
             z-index: 5;
+        }
+    }
+
+    &__container_active &__phones {
+        width: 35%;
+        min-height: 50px;
+        flex-direction: row-reverse;
+        flex-wrap: nowrap;
+        align-items: center;
+
+        @include desktop {
+            justify-content: flex-start;
+        }
+
+        @include tablet {
+            width: 15%;            
+            justify-content: flex-start;
         }
     }
     
@@ -156,6 +250,23 @@
             display: block;
             font-weight: 400;
         }
+    }
+
+    &__container_active &__phones-link:first-of-type {
+        color: $grey-blue-dark;
+        font-size: 23px;
+
+        @include desktop {
+            font-size: 16px;
+        }
+
+        @include tablet {
+            display: none;     
+        }
+    }
+
+    &__container_active &__phones-link:last-of-type {
+        display: none;
     }
 
     // &__phones-link-number {
@@ -186,6 +297,31 @@
         }
     }
 
+    &__container_active &__phones-link-number::before {
+        display: none;
+    }
+
+    &__phones-link-img {
+        display: none;
+    }
+
+    &__container_active &__phones-link-img {
+        display: block;
+        max-width: 30px;
+        height: auto;
+        margin: 0 10px 0 0;
+
+        @include desktop {
+            max-width: 20px;
+        }
+
+        @include tablet {
+            display: block;
+            max-width: 40px;
+            margin: 0;
+        }
+    }
+
     &__menu {
         background-color: $blue-dark;
         flex-basis: 100%;
@@ -196,5 +332,9 @@
             padding: 0;
             background-color: transparent;
         }
+    }
+
+    &__container_active &__menu {
+        display: none;
     }
 }
