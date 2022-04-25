@@ -36,26 +36,30 @@
                     <div class="menu__icon mobile"><span></span></div>
                     <nav class="menu__body">
                         <ul class="menu__list">
-                            <li><a data-goto=".first-screen" href="#" class="menu__link">Курсы английского</a></li>
-                            <li><a data-goto=".reviews" href="#" class="menu__link">Отзывы</a></li>
-                            <li><a data-goto=".third-screen" href="#" class="menu__link">Репетиторы</a></li>
-                            <li><a data-goto=".fourth-screen" href="#" class="menu__link">Стоимость и расписание</a></li>
                             <li>
-                                <a href="#" class="menu__link">Страница</a>
+                                <a data-goto=".intro" href="#" class="menu__link">Курсы английского</a>
                                 <span class="menu__arrow"></span>
                                 <ul class="menu__sub-list">
                                     <li>
-                                        <a href="" class="menu__sub-link">Раздел страницы №1</a>
+                                        <a data-goto=".example" href="#" class="menu__sub-link">Английский начинающим с нуля</a>
                                     </li>
                                     <li>
-                                        <a href="" class="menu__sub-link">Раздел страницы №2</a>
+                                        <a data-goto=".levels" href="#" class="menu__sub-link">Английский от A0 до С1</a>
                                     </li>
                                     <li>
-                                        <a href="" class="menu__sub-link">Раздел страницы №3</a>
+                                        <a data-goto=".speacking" href="#" class="menu__sub-link">Разговорный клуб</a>
+                                    </li>
+                                    <li>
+                                        <a data-goto=".education" href="#" class="menu__sub-link">Процесс обучения</a>
                                     </li>
                                 </ul>
-                            </li>
-                            <li><a href="#" class="menu__link">Контакты</a></li>
+                            </li>                            
+                            <li><a data-goto=".reviews" href="#" class="menu__link">Отзывы</a></li>
+                            <li><a data-goto=".special" href="#" class="menu__link">Особенности</a></li>
+                            <li><a data-goto=".result" href="#" class="menu__link">Результат</a></li>
+                            <li><a data-goto=".price" href="#" class="menu__link">Стоимость</a></li>
+                            <li><a data-goto=".shedule" href="#" class="menu__link">Расписание</a></li>
+                            <li><a data-goto=".map" href="#" class="menu__link">Контакты</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -82,7 +86,7 @@
                 <p class="intro__text">Специализированная школа THE ENGLISH Сompany предлагает широкий выбор курсов английского языка для людей с уровнем от начинающих с нуля до углубленного разговорного.</p>
             </div>
             <div class="intro__neadtext headtext-h3 headtext_bold">Больше 3600 жителей Гомеля здесь выучили английский язык и высоко оценили качество обучения.</div>
-            <button class="intro__btn btn_type3" data-goto=".opinions">Отзывы о курсе</button>
+            <button class="intro__btn btn_type3" data-goto=".reviews">Отзывы о курсе</button>
             <p class="intro__desc">Центр предоставляет выгодные условия, европейский метод преподавания и много разговорной практики, чтобы вы смогли свободно общаться на английском языке. С 2013 года по 2022 г. - неизменный лидер обучения языку города.</p>
             
         </section>
@@ -151,9 +155,9 @@
             <h4 class="contacts__desc headtext-h3 bold">Информация о местах в ближайших группах и консультация:</h4>
             <a href="tel:+375259369202" class="contacts__phone">+375 25 936-92-02</a>
             <a href="tel:+375232216875" class="contacts__phone">+375 232 21 68 75</a>
-            <button class="contacts__btn btn_type3">Записаться на тест по определению уровня</button>
+            <button class="contacts__btn btn_type3  openform">Записаться на тест по определению уровня</button>
         </section>
-        <section class="headtext__separate">
+        <section class="headtext__separate speacking">
             <h3 class="headtext-h2 uppercase bold">Разговорная практика</h3>
         </section>
         <section class="grey">
@@ -175,7 +179,7 @@
                 <div class="blue__extra-box-text">Кроме 2-х встреч в неделю по основному курсу, только студенты школы регулярно смогут посещать 3-е дополнительное занятие по практике языка бесплатно.</div>
                 <img src="./img/students/students_12.jpg" alt="" class="blue__extra-box-img">
             </div>
-            <div class="blue__btn btn_type4 openform bold">Записаться на Speaking Club*</div>
+            <div class="blue__btn btn_type4 openform bold  openform">Записаться на Speaking Club*</div>
             <div class="blue__auxilary container">* Бесплатное посещение доступно для студентов наших курсов</div>
         </section>
         <section class="photos">
@@ -184,7 +188,7 @@
             <img src="./img/students/students_14.jpg" alt="" class="photos__photo">
             <img src="./img/students/students_15.jpg" alt="" class="photos__photo">           
         </section>
-        <section class="headtext__separate">
+        <section class="headtext__separate shedule">
             <h3 class="headtext-h2 uppercase bold">Расписание</h3>
         </section>
         <section class="blue">
@@ -196,19 +200,19 @@
                     <div class="grey__extra-box-item-info">
                         <span class="bold grey__extra-box-name uppercase">Утренние уроки</span>В период с Пн. по Пт.:<br> 09.00, 10.40, 12.20.
                     </div>
-                    <button class="btn_type4 grey__extra-box-btn">Записаться</button>
+                    <button class="btn_type4 grey__extra-box-btn openform">Записаться</button>
                 </div>
                 <div class="grey__extra-box-item">
                     <div class="grey__extra-box-item-info">
                         <span class="bold grey__extra-box-name uppercase">Вечерние курсы</span>В будние дни:<br> 16.20, 18.00, 19.40 - начало урока.
                     </div>
-                    <button class="btn_type4 grey__extra-box-btn">Записаться</button>
+                    <button class="btn_type4 grey__extra-box-btn openform">Записаться</button>
                 </div>
                 <div class="grey__extra-box-item">
                     <div class="grey__extra-box-item-info">
                         <span class="bold grey__extra-box-name uppercase">По выходным</span> Cб + Вс:<br> 10.00, 11.40 или 13.20.
                     </div>
-                    <button class="btn_type4 grey__extra-box-btn openform">Записаться</button>
+                    <button class="btn_type4 grey__extra-box-btn openform openform">Записаться</button>
                 </div>
             </div>
         </section>
@@ -218,15 +222,15 @@
         </section>
         <section class="photos">
             <h3 class="visually-hidden">Фото</h3>
-            <img src="./img/class_rooms/classroom_1.jpg" alt="" class="photos__photo">
-            <img src="./img/class_rooms/classroom_2.jpg" alt="" class="photos__photo">
-            <img src="./img/class_rooms/classroom_3.jpg" alt="" class="photos__photo">
-            <img src="./img/class_rooms/classroom_4.jpg" alt="" class="photos__photo">
-            <img src="./img/class_rooms/classroom_5.jpg" alt="" class="photos__photo">
-            <img src="./img/class_rooms/classroom_6.jpg" alt="" class="photos__photo">            
+            <img src="./img/class_rooms/classroom_1.jpg" alt="фото учебного класса" class="photos__photo">
+            <img src="./img/class_rooms/classroom_2.jpg" alt="фото учебного класса" class="photos__photo">
+            <img src="./img/class_rooms/classroom_3.jpg" alt="фото учебного класса" class="photos__photo">
+            <img src="./img/class_rooms/classroom_4.jpg" alt="фото учебного класса" class="photos__photo">
+            <img src="./img/class_rooms/classroom_5.jpg" alt="фото учебного класса" class="photos__photo">
+            <img src="./img/class_rooms/classroom_6.jpg" alt="фото учебного класса" class="photos__photo">            
         </section>
 
-        <section class="headtext__separate container">
+        <section class="headtext__separate container result">
             <h3 class="headtext-h2 bold">Ощутимый результат с 1 месяца.</h3>
             <div class="headtext-h4_extra">Вы сможете узнать максимум полезной информации на каждом занятия.</div>
         </section>
@@ -274,25 +278,37 @@
         </section>
         <section class="levels">
             <div class="container">
-                <h3 class="levels__headtext headtext-h2 bold">Уровни от Начального до Advanced</h3>
+                <h3 class="levels__headtext headtext-h2 bold">Уровни от Начального до Advanced (CERF)</h3>
                 <div class="levels__text headtext-h4">Более 10 лет методисты тщательно подбирают для учеников в Гомеле учебные программы:</div>
             </div>            
             <div class="levels__box">
                 <div class="levels__item">
                     <div class="levels__name">Beginner (Starter)</div>
-                    <div class="levels__info"><span class="levels__info-desc">- курс для начинающих с нуля (A0). Тем жителям Гомеля, кто не учил этот язык</span></div>
+                    <div class="levels__info">
+                        <span class="levels__info-desc">- курс для начинающих с нуля (A0). Тем жителям Гомеля, кто не учил этот язык</span>
+                        <button class="levels__btn btn_type3 openform">Получить консультацию</button>
+                    </div>
                 </div>
                 <div class="levels__item">
                     <div class="levels__name">Elementary (A1)</div>
-                    <div class="levels__info"><span class="levels__info-desc">- когда-то уже учили язык. Есть начальные знания, но они частично забыты или требуют дополнительной проработки основ.</span></div>
+                    <div class="levels__info">
+                        <span class="levels__info-desc">- когда-то уже учили язык. Есть начальные знания, но они частично забыты или требуют дополнительной проработки основ.</span>
+                        <button class="levels__btn btn_type3 openform">Получить консультацию</button>
+                    </div>
                 </div>
                 <div class="levels__item">
                     <div class="levels__name">Pre-Intermediate (B1), Intermediate (B2)</div>
-                    <div class="levels__info"><span class="levels__info-desc">- имеете базу и хочется укрепить и развить навыки общения и грамматику для своих целей.</span></div>
+                    <div class="levels__info">
+                        <span class="levels__info-desc">- имеете базу и хочется укрепить и развить навыки общения и грамматику для своих целей (Собеседование / Работа в IT / и др.).</span>
+                        <button class="levels__btn btn_type3 openform">Получить консультацию</button>
+                    </div>
                 </div>
                 <div class="levels__item">
                     <div class="levels__name">Upper-Intermediate (C1), Advanced (C2)</div>
-                    <div class="levels__info"><span class="levels__info-desc">- владеете высоким уровнем и есть желание регулярно получать языковую практику, углубленное обучение.</span></div>
+                    <div class="levels__info">
+                        <span class="levels__info-desc">- владеете высоким уровнем и есть желание регулярно получать языковую практику, углубленное обучение.</span>
+                        <button class="levels__btn btn_type3 openform">Получить консультацию</button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -315,7 +331,7 @@
             <img src="./img/students/students_17.jpg" alt="" class="photos__photo">
             <img src="./img/students/students_18.jpg" alt="" class="photos__photo">           
         </section>
-        <section class="headtext__separate">
+        <section class="headtext__separate education">
             <div class="headtext-h3 bold container">3 фактора, которые помогут в обучении:</div>
         </section>
         <section class="motivation">
@@ -369,6 +385,13 @@
                     </tr>
                 </tbody>
             </table> 
+        </section>
+        <section class="contacts container">
+            <h4 class="contacts__desc headtext-h3 bold">Бесплатный пробный урок и определение уровня английского:</h4>
+            <div class="headtext-h4_extra">Чтобы увидеть занятие в любой действующей группе, просто свяжитесь с нами по телефону:</div>
+            <a href="tel:+375259369202" class="contacts__phone">+375 25 936-92-02</a>
+            <a href="tel:+375232216875" class="contacts__phone">+375 232 21 68 75</a>
+            <button class="contacts__btn btn_type3 openform">Записаться на бесплатный урок</button>
         </section>
         <section class="teachers">
             <div class="container">
@@ -435,7 +458,7 @@
                 <div class="map__info">
                     <h3 class="map__headtext headtext-h4 bold">Адрес / Тестирование</h3>
                     <div class="map__desc">Gomel, Sovetskaya st.,126 - 68 (2-й этаж).</div>
-                    <button class="map__btn btn_type4">Записаться на тестирование*</button> 
+                    <button class="map__btn btn_type4 openform">Записаться на тестирование*</button> 
                     <div class="map__desc">* Устное собеседование проводится для подбора группы точно по вашему уровню. Для определения уровня английского, запишитесь на встречу с нашим преподавателем.</div>                   
                     <div class="map__desc bold">Режим работы школы:</div>
                     <div class="map__desc"><span class="bold"> Пн - Пт:</span> 09.30 - 22.00  <span class="bold">Сб, Bc:</span>Сб - Bc: 10.00 - 19.00</div>
@@ -463,8 +486,8 @@
             <section class="mainform">
                 <h6 class="visually-hidden">Заказ звонка</h6>
                 <form action="#" class="mainform__box">
-                    <h4 class="mainform__title">Заказ обратного звонка</h4>
-                    <div class="mainform__desc">Оставьте заявку и наш менеджер произведет точные расчеты для Вашего забора!</div>
+                    <h4 class="mainform__title">Заказ звонка</h4>
+                    <div class="mainform__desc">Оставьте заявку на консультацию</div>
                     <input type="tel" class="mainform__input  tel _req" placeholder="Ваш телефон" name="phone">
                     <input type="hidden" name="city" value="ГОМЕЛЬ">
                     <input type="hidden" name="sort" value="Курсы английского">

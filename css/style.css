@@ -1411,12 +1411,13 @@ body._touch .menu__list > li._active .menu__arrow {
 
 .levels__info {
   background-color: #ccd2dd59;
-  width: 320px;
+  width: 90%;
   height: 320px;
-  border-radius: 50%;
-  padding: 30px;
+  border-radius: 5px;
+  padding: 70px 30px 20px 30px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: start;
   align-items: center;
   border: 2px solid #e0e5f12e;
 }
@@ -1433,6 +1434,40 @@ body._touch .menu__list > li._active .menu__arrow {
   font-size: 16px;
   font-style: italic;
   text-align: center;
+  position: relative;
+}
+
+.levels__info-desc::before {
+  content: "";
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  top: -55px;
+  left: calc(50% - 17px);
+  background-image: url("../img/icons/logo-2.png");
+  background-repeat: repeat;
+  background-size: cover;
+  opacity: .2;
+}
+
+.levels__btn {
+  border: 2px solid #ff7192;
+  background: #ff7192;
+  color: #fff;
+  margin: auto auto 25px auto;
+}
+
+@media (max-width: 767px) {
+  .levels__btn {
+    margin: 40px auto 25px auto;
+  }
+}
+
+.levels__btn:hover {
+  border: 2px solid #ff7192;
+  background: transparent;
+  color: #ff7192;
+  margin: auto auto 25px auto;
 }
 
 .motivation {
@@ -1564,7 +1599,7 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 
 .price__th {
-  background: #424F60;
+  background: #488AE1;
   color: #fff;
   min-height: 60px;
   padding: 30px 15px;
@@ -1836,7 +1871,7 @@ body._touch .menu__list > li._active .menu__arrow {
   display: block;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.592);
+  background: #3c3c3cc2;
   position: fixed;
   top: 0;
   left: 0;
@@ -1887,7 +1922,7 @@ body._touch .menu__list > li._active .menu__arrow {
   font-size: 25px;
   text-align: center;
   margin: 0 0 20px 0;
-  color: #2850A8;
+  color: #3c3c3cc2;
   font-weight: 600;
 }
 
@@ -1912,13 +1947,13 @@ body._touch .menu__list > li._active .menu__arrow {
   font-style: normal;
   color: #000;
   text-align: center;
-  border: 1px solid #F7F5FB;
+  border: 1px solid #3c3c3cc2;
   margin: 0 auto 30px auto;
   text-transform: uppercase;
 }
 
 .mainform__input:focus {
-  border: 1px solid #F7F5FB;
+  border: 1px solid #3c3c3c;
   outline: none;
 }
 
@@ -1927,7 +1962,7 @@ body._touch .menu__list > li._active .menu__arrow {
   width: 100%;
   max-width: 300px;
   margin: 0 auto 20px auto;
-  background: #ffd700;
+  background: #F0A900;
   border: none;
   padding: 12px 10px;
   border-radius: 25px;
@@ -1940,7 +1975,7 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 
 .mainform__btn:hover {
-  background: #F0A900;
+  background: #ffd700;
   cursor: pointer;
 }
 
@@ -1958,6 +1993,7 @@ body._touch .menu__list > li._active .menu__arrow {
 .mainform__policy-label {
   position: relative;
   width: 100%;
+  color: #3c3c3cc2;
   margin: 0 0 0 35px;
   font-size: 14px;
   line-height: 17px;

@@ -127,7 +127,7 @@ $videoBox .addEventListener ('click', e => {
 
 //goto links navigation
 
-const menuLinks = document.querySelectorAll('.menu__link[data-goto]');
+const menuLinks = document.querySelectorAll('[data-goto]');
 console.log(menuLinks);
 if(menuLinks.length > 0) {
     Array.from(menuLinks).forEach (menuLink => {
