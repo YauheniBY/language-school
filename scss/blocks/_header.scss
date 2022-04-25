@@ -1,0 +1,200 @@
+.header{
+    
+    background-color: $blue-dark;    
+    color: $white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+
+    &__container {
+        display: flex;
+        flex-flow: row wrap;
+        width: 100%;
+        max-width: 1600px;
+        justify-content: center;
+        align-items: flex-start;
+        background-color: $blue;
+        min-height: 70px;
+
+        @include tablet {
+            justify-content: space-around;
+            padding: 0 17px;
+        }
+    }
+
+    &__logo, &__info, &__phones {
+        width: 30%;
+        display: flex;     
+    }
+
+    &__logo {
+        align-items:flex-start;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin: auto 0;
+        text-align: left;
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &__logo-link {        
+        margin: 0 15px 0 0;
+    }
+
+    &__logo-img {
+        max-width: 50px;
+        height: auto;
+        display: block;       
+    }
+
+    &__logo-img:hover {
+        cursor: pointer;
+    }
+
+    &__logo-name {
+        color: $white;
+        text-decoration: none;
+        font-size: 21px;
+        line-height: 25px;
+        font-weight: 600;
+        display: inline-block;
+    }
+
+    &__logo-name:hover {
+        cursor: pointer;
+    }
+
+    &__logo-sub-name {
+        color: $white;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 200;
+        display: block;
+    }
+
+    &__info {
+        align-items:center;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto 0;
+    }
+
+    &__info-btn {
+        color: $white;
+        border: 1px solid $white;
+        border-radius: 20px;
+        font-size: 12px;
+        line-height: 15px;
+        padding: 6px 10px;
+        background-color: $blue;
+        text-decoration: none;
+
+        @include tablet {
+            background-color: $yellow;
+            color: $blue-darker;  
+            border-radius: 4px;
+            font-size: 18px;
+            line-height: 25px;
+            text-transform: uppercase;
+        }
+    }
+
+    &__info-btn:hover{
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    &__info-time {
+        text-align: center;        
+        font-size: 15px;
+        line-height: 22px;
+        font-weight: 300;        
+        margin-top: 10px;
+
+        @include tablet {
+            display: none;          
+        }
+    }
+
+    &__phones {
+        align-items:flex-end;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto 0;
+        min-height: 100px;
+
+        @include tablet {
+            width: 60%;
+            min-height: 70px;
+            z-index: 5;
+        }
+    }
+    
+    &__phones-link {
+        color: $white;
+        text-decoration: none;       
+        font-size: 18px;
+        line-height: 30px;
+        opacity: .9;
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &__phones-link:first-of-type {       
+        font-size: 20px;
+        line-height: 26px;
+        font-weight: 600;
+        opacity: 1;
+
+        @include tablet {
+            display: block;
+            font-weight: 400;
+        }
+    }
+
+    // &__phones-link-number {
+    //     @include tablet {
+    //         display: none;
+    //     }
+    // }
+
+
+    &__phones-link-number::before {
+        content: "";
+        width: 16px;
+        height: 16px;
+        background: url('../img/icons/phone_icon.png');
+        background-repeat: no-repeat;
+        background-size: 16px;
+        display: inline-block;
+        margin: 0 7px 0 0;
+
+        @include tablet {
+            display: none;
+            width: 36px;
+            height: 36px;
+            background-size: 26px;
+            background-position: center;
+            border: 2px solid $white;
+            border-radius: 50%;          
+        }
+    }
+
+    &__menu {
+        background-color: $blue-dark;
+        flex-basis: 100%;
+        padding: 0 5%;
+
+        @include tablet {
+            flex-basis: auto;
+            padding: 0;
+            background-color: transparent;
+        }
+    }
+}

@@ -1,0 +1,78 @@
+.callback {
+    display: block;
+    background: rgb(25, 187, 155);
+    padding: 5px;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    border-radius: 50%;
+
+
+    &-pulse {
+        cursor: pointer;
+        box-shadow: 0 0 0 rgba(25, 187, 155, 0.4);
+        animation: pulse 10s infinite;
+    }
+
+    &__img {
+        max-width: 47px;
+        border-radius: 50%;
+        margin: 0;
+        display: block;
+
+        
+        -webkit-animation: circle-fill-anim 10s infinite ease-in-out;
+        -moz-animation: circle-fill-anim 10s infinite ease-in-out;
+        -ms-animation: circle-fill-anim 10s infinite ease-in-out;
+        -o-animation: circle-fill-anim 10s infinite ease-in-out;
+        animation: circle-fill-anim 10s infinite ease-in-out;
+        -webkit-transition: all .5s;
+        -moz-transition: all .5s;
+        -o-transition: all .5s;
+        transition: all 0.5s;
+    }
+}
+
+@-webkit-keyframes pulse {
+    0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(25, 187, 155, 0.4);
+    }
+    16% {
+    -webkit-box-shadow: 0 0 0 35px rgba(25, 187, 155, 0);
+    }
+    25% {
+    -webkit-box-shadow: 0 0 0 0 rgba(25, 187, 155, 0);
+    }
+    100% {
+    -webkit-box-shadow: 0 0 0 0 rgba(25, 187, 155, 0);
+    }
+   }
+
+
+   @keyframes pulse {
+    0% {
+    -moz-box-shadow: 0 0 0 0 rgba(25, 187, 155, 0.4);
+    box-shadow: 0 0 0 0 rgba(25, 187, 155, 0.4);
+    }
+    16% {
+    -moz-box-shadow: 0 0 0 35px rgba(204,169,44, 0);
+    box-shadow: 0 0 0 35px rgba(204,169,44, 0);
+    }
+    25% {
+    -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+    box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+    }
+    100% {
+    -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+    box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+    }
+   }
+
+   
+   @keyframes circle-fill-anim{
+    0%{transform:rotate(0deg) scale(1) skew(1deg) }
+    2.5%,7.5%{transform:rotate(-25deg) scale(1) skew(1deg) }
+    5%,10%{transform:rotate(25deg) scale(1) skew(1deg) }
+    12%{transform:rotate(0deg) scale(1) skew(1deg) }
+    100%{transform:rotate(0deg) scale(1) skew(1deg) }
+   }

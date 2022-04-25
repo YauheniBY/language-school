@@ -1,0 +1,91 @@
+.reviews {
+    padding: 180px 0 100px 0;
+
+    @include mobile {
+        padding: 120px 0 50px 0;
+     }
+
+    &__box {
+        display: flex;
+        flex-flow: row wrap;
+        width: 100%;
+        padding: 0 30px;
+        max-width: 950px;
+        margin: 0 auto;
+   
+        @include mobile {
+           padding: 0;
+        }
+    }
+    &__text {
+        margin: 70px 0;
+
+        @include mobile {
+            margin: 70px 0 40px 0;
+         }
+    }
+
+    &__img {
+        width: 50%;
+
+        @include mobile {
+            width: 100%;
+            margin: 0 0 10px 0;
+            box-shadow: 0 0 10px $blue-lighter;
+        }
+    }
+
+    &__extra-text {
+        margin: 100px 0 60px 0;
+        font-size: 43px;
+    }
+
+    &__video-box {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+        cursor: pointer;
+        box-shadow: 0 10px 20px $blue-lighter2;
+    }
+
+    &__video-box::before {
+        content: "";
+        width: 70px;
+        height: 70px;
+        background-color: $blue-transparent;
+        border-radius: 50%;
+        position: absolute;
+        top: calc(50% - 35px);
+        left: calc(50% - 35px);
+    }
+
+    &__video-box:hover::before {
+        background-color: $blue;
+    }
+
+    &__video-box_active::before {
+        content: none;
+    }    
+
+    &__video-box::after {
+        content: "";
+        width: 0px;
+        height: 0px;
+        border-top: 15px solid transparent;
+        border-bottom: 15px solid transparent;
+        border-left: 30px solid $white;
+        position: absolute;
+        top: calc(50% - 15px);
+        right: calc(50% - 19px);
+    }
+
+    &__video-box_active::after {
+        content: none;
+    }
+
+    &__video {
+        width: 100%;
+        display: block;
+    }
+}

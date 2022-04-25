@@ -1,0 +1,36 @@
+.intro {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+
+    &__box {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: start;
+        align-items: flex-start;
+        margin: 80px auto; 
+        text-align: left;      
+    }
+
+    &__img {
+        text-align: center;
+        width: 50%;
+        max-width: 200px;
+        border-radius: 50% 50% 0 50%;
+        margin: 0 0 0px 30px;
+    }
+
+    &__neadtext {
+        margin: 0 0 80px 0;
+    }
+
+    &__btn {
+        margin: 0 0 70px 0;
+    }
+
+    &__desc {        
+        margin: 0 0 80px 0;
+    }
+}

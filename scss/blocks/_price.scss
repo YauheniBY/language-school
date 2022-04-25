@@ -1,0 +1,33 @@
+.price {
+    padding: 0 30px 70px 30px;
+    max-width: 950px;
+    margin: 0 auto;
+
+    @include mobile {
+       padding: 0;
+    }
+
+    &__text {
+        color: $blue-darker;
+        margin: 0 0 50px 0;
+    }
+
+    &__table {
+        width: 100%;
+
+    }    
+
+    &__th {
+        background: $blue-darker;
+        color: $white;
+        min-height: 60px;
+        padding: 30px 15px;
+        border-bottom: 1px solid #fff;
+    }
+
+    &__th-last {
+        border-bottom: 1px solid $grey2;
+    }
+    
+
+}

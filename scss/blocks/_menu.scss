@@ -1,0 +1,238 @@
+.menu{
+    height: 100%;
+
+    @include tablet {
+        height: 100%;
+        order: -1;
+    }
+
+    &__icon {
+        display: none;
+
+        @include tablet {
+            display: block;
+            position: relative;
+            top: 20px;
+            cursor:pointer;
+            width: 30px;
+            height: 18px;
+            z-index: 5;
+        }
+    }
+
+    &__icon span,
+    &__icon::before,
+    &__icon::after {
+        left: 0;
+        position: absolute;
+        width: 100%;
+        height: 10%;
+        transition: .3s;
+        background-color: $white;
+    }
+
+    &__icon::before,
+    &__icon::after {
+        content: "";
+    }
+
+    &__icon::before {
+        top: 0;
+    }
+
+    &__icon::after {
+        bottom: 0;
+    }
+
+    &__icon span {
+        top: 50%;
+        transform: scale(1) translate(0px, -50%);
+    }
+
+    &__icon._active span {
+        transform: scale(0) translate(0px, -50%);
+    }
+
+    &__icon._active::before {
+        top: 50%;
+        transform:rotate(-45deg) translate(0px, -50%);
+    }
+
+    &__icon._active::after {
+        bottom: 50%;
+        transform:rotate(45deg) translate(0px, 50%);
+    }
+
+    &__list, &__sub-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__list {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+
+        @include tablet {
+            flex-direction: column;
+            justify-content: space-between;
+            width: 100%;
+            align-items: flex-start;
+        }
+    }
+
+    &__list>li {
+        position: relative;
+        flex-wrap: wrap;
+    }
+
+    &__link {
+        color: $white;
+        opacity: .8;
+        transition: .3s;
+        text-decoration: none;
+        font-size: 17px;
+        font-weight: 200;
+        padding: 10px 0;
+        display: block;
+
+        @include tablet {
+            font-size: 22px;
+            padding: 20px 0;            
+        }
+    }
+
+    &__link:hover {
+        opacity: 1;
+        transition: .3s;
+        text-shadow: 0 0 20px $blue-darker;
+    }
+
+    &__body {
+       @include tablet {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        background: $blue-transparent;
+        padding: 100px 30px 30px 30px;
+        transition: left .3s;
+        left:-100%;
+        z-index: -1;
+       }
+    }
+
+    &__body._active {
+        @include tablet {
+            left: 0;
+        }
+    }
+
+    &__arrow {
+        display: none;
+    }
+
+    &__sub-list {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        min-width: 250px;
+        background: $blue-dark;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 40px; 
+        transform: translate(0px, 10%);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: all .3s ease 0s;
+
+        @include tablet {
+            position: relative;
+            background-color: $white;
+            flex: 1 1 100%;
+            margin: 10px 0 0 0;
+            display: none;
+            padding: 15px 40px 25px 40px;
+            border-radius: 2px;             
+        }
+    }
+
+    &__list>li._active &__sub-list {
+        @include tablet {
+            display: block;
+        }
+    }
+
+    &__sub-link {
+        color: $white;
+        text-decoration: none;
+        font-weight: 300;
+        padding-top: 10px;
+        display: block;
+        opacity: .8;
+        transition: .2s;
+
+        @include tablet {
+            color: $blue-darker;
+            font-weight: 400;
+            font-size: 20px;
+            padding: 10px 0;
+        }
+    }
+
+    &__sub-link:hover {
+        cursor: pointer;
+        opacity: 1;
+        transition: .2s;
+    }
+    body._pc &__list>li:hover &__sub-list {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(0px, 0px);
+        pointer-events: all;
+    }
+
+    body._touch &__list>li {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+
+    body._touch &__link {
+        flex: 1 1 auto;
+    }
+
+    body._touch &__arrow {
+        display: block;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 10px solid $white;
+        width: 0;
+        height: 0;
+        transition: transform .3s;
+        margin: 2px 0 0 5px;
+
+        @include tablet {
+            margin: 2px 0 0 20px;
+        }
+
+    }
+
+    body._touch &__list>li._active &__sub-list {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(0px, 0px);
+        pointer-events: all;
+    }
+
+    body._touch &__list>li._active &__arrow {
+        transform: rotate(180deg);
+    }
+}
+

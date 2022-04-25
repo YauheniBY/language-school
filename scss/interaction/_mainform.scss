@@ -1,0 +1,152 @@
+.mainform {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: $black-transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -20;
+    opacity: 0;
+    transition: .2s;
+
+    @include mobile {        
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;        
+    }
+
+    &__active {        
+        z-index: 1000;
+        opacity: 1;
+        transition: .1s;
+    }
+    
+    &__box {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 30px;
+        left:calc(50% - 200px);
+        width: 95%;
+        max-width: 400px;
+        margin: auto;
+        background: $white;
+        padding: 30px 10px;
+        border-radius: 15px;
+        color: $black;
+
+        @include mobile {        
+            position: relative;
+            left: 0;
+            top: 0;
+            margin: 10px auto;
+        }
+    }
+
+    &__title {
+        font-size: 25px;
+        text-align: center;
+        margin: 0 0 20px 0;
+        color: $blue-dark;
+        font-weight: 600;
+    }
+
+    &__desc {
+        display: block;
+        max-width: 80%;
+        font-size: 15px;
+        line-height: 15px;
+        text-align: center;
+        margin: 0 auto 20px auto;
+        color: $grey1;
+    }
+
+    &__input {
+        width: 100%;
+        max-width: 300px;
+        border-radius: 25px;
+        padding: 10px 8px;
+        @include font(16px, 18px, 700);
+        color: $black;
+        text-align: center;
+        border: 1px solid $blue-lighter;                      
+        margin: 0 auto 30px auto;
+        text-transform: uppercase;
+    }
+    &__input:focus {
+        border: 1px solid $blue-lighter;
+        outline:none;
+    }
+
+    &__btn {
+        display: block;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto 20px auto;
+        background: $yellow;
+        border: none;
+        padding: 12px 10px;
+        border-radius: 25px;
+        @include font(16px, 17px, 700);
+        text-transform: uppercase;
+        color: $black;
+    }
+
+    &__btn:hover {
+        background: $yellow-dark;
+        cursor: pointer;
+    }
+
+    &__privacy {
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    &__checkbox {
+        display: none;
+    }
+
+    &__policy-label {
+        position: relative;
+        width: 100%;
+        margin: 0 0 0 35px;        
+        @include font(14px, 17px, 400);
+    }
+
+    &__policy-label:before {
+        content: '';
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        top: 6px;
+        left: -20px;
+        border: 1px solid $blue-light;
+        border-radius: 3px;
+    }
+
+    &__checkbox.error &__policy-label:before {
+        border-color: $rose;
+    }
+
+    &__checkbox:checked+&__policy-label:after {
+        content: '';
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        top: 2px;
+        left: -19px;
+        background-image: url('../img/icons/mark.png');
+        background-repeat: no-repeat;
+        background-size: 14px 14px;
+        z-index: 1;
+    }
+
+    &__checkbox.error &__policy-label:before {
+        box-shadow: 0 0 0 2px $rose;
+    }
+
+
+}

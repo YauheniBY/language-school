@@ -1,0 +1,26 @@
+.corp {
+    padding: 100px 0;
+
+    &__headtext {
+        margin: 0 0 50px 0;
+    }
+    
+    &__text {
+        margin: 0 0 80px 0;
+    }
+
+    &__imgs {
+        display: flex;
+        flex-flow: row wrap;
+        width: 100%;
+    }
+
+    &__img {
+        width: 50%;
+        margin: 0 0 50px 0;
+
+        @include mobile {
+            width: 100%;
+        }
+    }
+}

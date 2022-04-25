@@ -1,0 +1,74 @@
+body{
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 22px;
+    line-height: 33px;
+    font-weight: 300;
+    color: $blue-darker;
+
+    @include mobile {
+        font-size: 20px;
+        line-height: 31px;
+    }
+}
+
+.visually-hidden {
+    position: fixed;
+    transform: scale(0);
+  }
+ 
+ .wrapper {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+ }
+
+ .mobile {
+     display: none;
+     @include tablet {
+         display: block;
+     }
+ }
+
+ .desktop {
+    display: block;
+     @include tablet {
+         display: none;
+     }
+ }
+
+ body._lock {
+     overflow: hidden;
+ }
+
+ .container {
+     padding: 0 30px;
+     max-width: 950px;
+     margin: 0 auto;
+
+     @include mobile {
+        padding: 0 15px;
+     }
+ }
+
+ .bold {
+    font-weight: 600; 
+}
+
+tr {
+    border: 1px solid $grey2;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.margin-top {
+    margin-top: 60px;
+}
+
+.margin-bottom {
+    margin-bottom: 60px;
+}
+ 
+ 

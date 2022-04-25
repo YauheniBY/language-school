@@ -1,0 +1,103 @@
+.motivation {
+    width: 100%;
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        border-left: 2px solid $blue-darker;
+        margin: 0 0 150px 130px;
+
+        @include tablet {
+            margin-left: 30px;
+        }
+    }
+
+    &__point {
+        position: relative;
+        margin-left: 50px;
+        text-align: left;
+    }
+    &__point:nth-child(2n) {
+        margin: 40px 0px 40px 50px;
+    }
+
+
+
+
+
+    &__point:first-of-type::before, &__point:nth-child(2n)::before, &__point:last-of-type::before {
+        width: 40px;
+        height: 40px;
+        background: $white;
+        border-radius: 50%;
+        border: 2px solid $blue-darker;
+        position: absolute;
+        left: -73px;;
+        text-align: center;
+        line-height: 42px;
+    }
+
+    &__point:first-of-type::before {
+        content: "1";
+        top: 0;
+    }
+
+    &__point:nth-child(2n)::before {
+        top: -5px;
+        content: "2";
+    }
+
+    &__point:last-of-type::before {
+        content: "3";
+        bottom: 0;
+    }
+
+    &__items {
+        display: flex;
+        flex-flow: row wrap;
+        width: 100%;
+        justify-content: space-around;
+        align-items: flex-start;
+        margin: 100px auto;
+        padding: 0 30px;
+        max-width: 950px;
+   
+        @include mobile {
+           padding: 0;
+        }
+    }
+
+    &__item {
+        width: 25%;
+        margin: 0 -30px 30px 30px;
+        position: relative;
+        text-align: left;
+        font-size: 20px;
+
+        @include mobile {
+            margin: 30px 15px 30px 90px;
+            width: 75%;
+        }
+    }
+
+    &__item::before {
+        content: "✓";
+        font-size: 20px;
+        font-weight: 600;
+        color: $white;
+        text-align: center;
+        line-height: 38px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: $blue-darker;
+        display: block;
+        position: absolute;
+        top: -2px;
+        left: -55px;
+        z-index: 0;      
+        overflow: hidden;
+    }
+}

@@ -1,0 +1,59 @@
+.headtext{
+    &-h2 {
+        font-size: 40px;
+        line-height: 45px;
+        position: relative;
+        
+        @include mobile {
+            font-size: 32px;
+        }
+    }
+
+    &-h3 {
+        font-size: 32px;
+        line-height: 52px;
+
+        @include mobile {
+            font-size: 23px;
+            line-height: 37px;
+        }
+    }
+
+    &-h4 {
+        font-size: 30px;
+        line-height: 35px;
+
+        @include mobile {
+            font-size: 20px;
+            line-height: 37px;
+        }
+    }
+
+    &-h4_extra{
+        margin: 70px auto;
+    }
+
+    &-h2::after {
+        content: "";
+        width: 180px;
+        height: 2px;
+        background-color: $rose;
+        position: absolute;
+        top: -40px;
+        left: calc(50% - 90px);
+    }
+    
+    &_bold {
+        font-weight: 600; 
+    }
+
+    &__separate {
+        margin: 120px auto;
+
+        @include mobile {
+            margin: 120px auto 80px auto;
+        }
+    }
+    
+    
+}

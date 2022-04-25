@@ -1,0 +1,22 @@
+.photos {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 20px $shadow;
+
+    &__photo {
+        width: 33.33%;
+
+        @include mobile {
+            width: 50%;
+        }
+    }
+
+    &__photo:nth-of-type(3n) {
+        @include mobile {
+            width: 100%;
+        }
+    }
+}
