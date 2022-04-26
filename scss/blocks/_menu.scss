@@ -138,7 +138,7 @@
     &__sub-list {
         position: absolute;
         top: 100%;
-        right: 0;
+        right: -50%;
         min-width: 250px;
         background: $blue-dark;
         display: flex;
@@ -153,6 +153,7 @@
 
         @include tablet {
             position: relative;
+            right: 0px;
             background-color: $white;
             flex: 1 1 100%;
             margin: 10px 0 0 0;
@@ -176,6 +177,8 @@
         display: block;
         opacity: .8;
         transition: .2s;
+        font-size: 17px;
+        text-align: left;
 
         @include tablet {
             color: $blue-darker;

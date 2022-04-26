@@ -104,6 +104,11 @@ body {
   }
 }
 
+._req.error {
+  border-color: #ff7192;
+  position: relative;
+}
+
 body._lock {
   overflow: hidden;
 }
@@ -205,7 +210,7 @@ tr {
 }
 
 .header {
-  background-color: #2850A8;
+  background-color: transparent;
   color: #fff;
   position: fixed;
   top: 0;
@@ -219,6 +224,7 @@ tr {
   flex-flow: row wrap;
   width: 100%;
   max-width: 1600px;
+  margin: 0 auto;
   justify-content: center;
   align-items: flex-start;
   background-color: #3367D6;
@@ -715,7 +721,7 @@ tr {
 .menu__sub-list {
   position: absolute;
   top: 100%;
-  right: 0;
+  right: -50%;
   min-width: 250px;
   background: #2850A8;
   display: flex;
@@ -732,6 +738,7 @@ tr {
 @media (max-width: 767px) {
   .menu__sub-list {
     position: relative;
+    right: 0px;
     background-color: #fff;
     flex: 1 1 100%;
     margin: 10px 0 0 0;
@@ -755,6 +762,8 @@ tr {
   display: block;
   opacity: .8;
   transition: .2s;
+  font-size: 17px;
+  text-align: left;
 }
 
 @media (max-width: 767px) {
@@ -1030,6 +1039,8 @@ body._touch .menu__list > li._active .menu__arrow {
 
 .photos {
   width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -1400,6 +1411,9 @@ body._touch .menu__list > li._active .menu__arrow {
 
 .reviews {
   padding: 180px 0 100px 0;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 @media (max-width: 520px) {
@@ -1625,6 +1639,12 @@ body._touch .menu__list > li._active .menu__arrow {
   margin: auto auto 25px auto;
 }
 
+@media (max-width: 767px) {
+  .levels__btn:hover {
+    margin: 40px auto 25px auto;
+  }
+}
+
 .motivation {
   width: 100%;
 }
@@ -1781,6 +1801,8 @@ body._touch .menu__list > li._active .menu__arrow {
   display: flex;
   flex-flow: row wrap;
   width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 .teachers__photo {
@@ -1839,17 +1861,40 @@ body._touch .menu__list > li._active .menu__arrow {
   max-width: 320px;
 }
 
+.quest__form-border {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+
 .quest__input {
   width: 100%;
   margin: 0 0 15px 0;
   outline: none;
   border: 1px solid #424F60;
-  color: #28282855;
+  color: #3c3c3ced;
   padding: 10px 15px;
   text-align: center;
   background: none;
   font-size: 20px;
   border-radius: 3px;
+  position: relative;
+}
+
+.quest__input + .quest__label {
+  display: none;
+}
+
+.quest__input.error + .quest__label {
+  display: inherit;
+  width: 200px;
+  position: absolute;
+  top: -33px;
+  left: calc(50% - 100px);
+  z-index: 1;
+  color: #ff7192;
+  font-size: 13px;
+  line-height: 16px;
 }
 
 .quest__btn-submit {
@@ -1870,62 +1915,6 @@ body._touch .menu__list > li._active .menu__arrow {
 .quest__btn-submit:hover {
   opacity: .8;
   cursor: pointer;
-}
-
-.quest__privacy {
-  display: block;
-  width: 99%;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.quest__checkbox {
-  display: none;
-}
-
-.quest__policy-label {
-  position: relative;
-  width: 100%;
-  color: #28282866;
-  margin: 0 0 0 35px;
-  font-size: 14px;
-  line-height: 17px;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.quest__policy-label:before {
-  content: '';
-  width: 10px;
-  height: 10px;
-  position: absolute;
-  top: 3px;
-  left: -20px;
-  border: 1px solid #26262691;
-  border-radius: 3px;
-}
-
-.quest__checkbox.error .quest__policy-label:before {
-  border-color: #ff7192;
-}
-
-.quest__checkbox:checked + .quest__policy-label:after {
-  content: "✓";
-  width: 16px;
-  height: 16px;
-  position: absolute;
-  top: -2px;
-  left: -21px;
-  background-repeat: no-repeat;
-  background-size: 14px 14px;
-  z-index: 1;
-  color: #26262691;
-  font-weight: 600;
-  font-size: 18px;
-}
-
-.quest__checkbox.error .quest__policy-label:before {
-  box-shadow: 0 0 0 2px #ff7192;
 }
 
 .map {
@@ -2054,12 +2043,13 @@ body._touch .menu__list > li._active .menu__arrow {
 .last__btn {
   background: #00c853;
   padding: 15px 25px;
-  margin: 0 0 70px 0;
+  margin: 50px auto 120px auto;
   color: #fff;
   font-size: 27px;
   text-transform: uppercase;
   border: none;
   border-radius: 3px;
+  text-decoration: none;
 }
 
 .last__btn:hover {
@@ -2067,14 +2057,14 @@ body._touch .menu__list > li._active .menu__arrow {
   cursor: pointer;
 }
 
-.copy {
+.footer {
   background: #3367D6;
   background-image: linear-gradient(45deg, #3367D6 0%, #4374e0 33%, #3367D6 33%, #4374e0 66%, #3367D6 66%, #4374e0);
   color: #fff;
   padding: 10px 0 10px 0;
 }
 
-.copy__text {
+.footer__text {
   font-size: 15px;
 }
 
@@ -2132,7 +2122,7 @@ body._touch .menu__list > li._active .menu__arrow {
 .mainform__title {
   font-size: 25px;
   text-align: center;
-  margin: 0 0 20px 0;
+  margin: 0 0 32px 0;
   color: #424F60;
   font-weight: 600;
   text-transform: uppercase;
@@ -2175,6 +2165,26 @@ body._touch .menu__list > li._active .menu__arrow {
   font-size: 20px;
 }
 
+.mainform__input + .mainform__label {
+  display: none;
+}
+
+.mainform__input.error + .mainform__label {
+  display: inherit;
+  width: 200px;
+  position: absolute;
+  top: -33px;
+  left: calc(50% - 100px);
+  z-index: 1;
+  color: #ff7192;
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.mainform__input.error:focus + .mainform__label {
+  display: none;
+}
+
 .mainform__btn {
   display: block;
   width: 100%;
@@ -2202,55 +2212,6 @@ body._touch .menu__list > li._active .menu__arrow {
   width: 99%;
   margin: 0 auto;
   text-align: center;
-}
-
-.mainform__checkbox {
-  display: none;
-}
-
-.mainform__policy-label {
-  position: relative;
-  width: 100%;
-  color: #424F60;
-  margin: 0 0 0 35px;
-  font-size: 14px;
-  line-height: 17px;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.mainform__policy-label:before {
-  content: '';
-  width: 10px;
-  height: 10px;
-  position: absolute;
-  top: 3px;
-  left: -20px;
-  border: 1px solid #26262691;
-  border-radius: 3px;
-}
-
-.mainform__checkbox.error .mainform__policy-label:before {
-  border-color: #ff7192;
-}
-
-.mainform__checkbox:checked + .mainform__policy-label:after {
-  content: "✓";
-  width: 16px;
-  height: 16px;
-  position: absolute;
-  top: -2px;
-  left: -21px;
-  background-repeat: no-repeat;
-  background-size: 14px 14px;
-  z-index: 1;
-  color: #26262691;
-  font-weight: 600;
-  font-size: 18px;
-}
-
-.mainform__checkbox.error .mainform__policy-label:before {
-  box-shadow: 0 0 0 2px #ff7192;
 }
 
 .callback {

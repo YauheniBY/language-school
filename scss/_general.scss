@@ -36,6 +36,24 @@ body{
          display: none;
      }
  }
+ 
+ ._req.error {
+    border-color: $rose;
+    position: relative;
+ }
+
+ ._req.error::after {
+    // position: absolute;
+    // top: 0px;
+    // right: 0px;
+    // content: "У";
+    // width: 200px;
+    // height: 20px;
+    // color: $rose;
+    // font-size: 14px;
+    // font-weight: 300;    
+    // z-index: 1;    
+}
 
  body._lock {
      overflow: hidden;

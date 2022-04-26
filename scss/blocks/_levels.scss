@@ -107,5 +107,11 @@
         background: transparent;
         color:  $rose;
         margin: auto auto 25px auto;
+
+        @include tablet {
+            margin: 40px auto 25px auto;
+        }
     }
+
+
 }

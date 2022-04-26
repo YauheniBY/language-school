@@ -52,10 +52,7 @@ if(iconMenu) {
     });
 }
 
-var $openforms = document.querySelectorAll('.openform'),
-    $form = document.querySelector('.mainform'),
-    $body = document.querySelector('body'),
-    $btnTop = document.querySelector('.btn__top');
+var $btnTop = document.querySelector('.btn__top');
     $callbackBtn = document.querySelector('.callback');
     $header = document.querySelector('.header__container');
 
@@ -94,30 +91,8 @@ function hatActive() {
     }
 }
 
-
-// open Main form
-
-Array.from($openforms).forEach(function(element) {
-
-    element.addEventListener('click', function(){
-
-        $form.classList.add('mainform__active');        
-        $body.classList.add('_lock');
-
-    });        
-});
-
-//to close mainform
-
-$form.addEventListener('click',function(e){
-    if(e.target.classList.contains('mainform__active')){
-        $form.classList.remove('mainform__active');            
-        $body.classList.remove('_lock');
-    }
-});
-
-
 // video control panel by click 
+
 const $videoBox = document.querySelector('.reviews__video-box');
 const $video = document.querySelector('video');
 $videoBox .addEventListener ('click', e => {
@@ -128,6 +103,85 @@ $videoBox .addEventListener ('click', e => {
         $video.removeAttribute('controls');
         $videoBox.classList.remove('reviews__video-box_active');
     });
+});
+
+// footer year set
+
+const $year = document.querySelector('#year');
+let currentYear = new Date().getFullYear();
+
+if ($year) {
+    if($year.textContent !== `${currentYear}`) {
+        $year.textContent = `${currentYear}`;
+    }
+}
+
+//  input phone mask
+
+window.addEventListener('load', function(){
+
+    var inputs = document.querySelectorAll('.tel');
+
+        Array.from(inputs).forEach(function (input) {input.addEventListener("input", mask);});
+
+        Array.from(inputs).forEach(function (input){input.addEventListener("focus", mask);});
+
+        Array.from(inputs).forEach(function (input) {input.addEventListener("blur", mask);});
+
+
+    function setCursorPosition(pos, elem) {
+        
+        elem.focus();
+
+        if (elem.setSelectionRange) {
+
+            elem.setSelectionRange(pos, pos);
+        }
+
+        else if (elem.createTextRange) {
+
+            var range = elem.createTextRange();
+            range.collapse(true);
+            range.moveEnd("character", pos);
+            range.moveStart("character", pos);
+            range.select();
+
+        }
+
+    }
+
+     
+
+    function mask(event) {
+
+        var matrix = "+375_________",
+            i = 0,
+            def = matrix.replace(/\D/g, ""),
+            val = this.value.replace(/\D/g, "");
+
+        if (def.length >= val.length) {
+            val = def;
+        }
+
+        this.value = matrix.replace(/./g, function(a) {
+
+            return /[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? "" : a;
+
+        });
+
+        if (event.type == "blur") {
+
+            if (this.value.length == 4) {
+                this.value = "";
+            }
+
+        } else {
+            setCursorPosition(this.value.length, this);
+        }
+
+    }
+
+        
 });
 
 

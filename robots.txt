@@ -1,0 +1,24 @@
+User-agent: *
+Allow: /*?page
+Allow: /*?ref=
+Disallow: /*?
+Disallow: /stat/
+Disallow: /register
+Disallow: /index/sub/
+Disallow: /panel/
+Disallow: /admin/
+Disallow: /informer/
+Disallow: /secure/
+Disallow: /poll/
+Disallow: /search/
+Disallow: /abnl/
+Disallow: /*_escaped_fragment_=
+Disallow: /*-*-*-*-987$
+Disallow: /shop/order/
+Disallow: /shop/printorder/
+Disallow: /shop/checkout/
+Disallow: /shop/user/
+Disallow: /*0-*-0-17$
+Disallow: /*-0-0-
+
+Host: https://gomelenglish.x10.bz
