@@ -142,6 +142,30 @@
 
         testInfo.classList.toggle('quiz__test-info_active');
 
+        
+        if (testInfo.classList.contains('quiz__test-info_active')) {
+
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+
+            setTimeout( addLockToBody, 300);
+
+                // toTopInfoBlock ( position, addLockToBody);
+
+                // addLockToBody ();
+
+                function addLockToBody () {
+                    document.body.classList.add('_lock');
+                };
+
+        } else {
+
+            document.body.classList.remove('_lock');
+
+        }
+
 
 
     });

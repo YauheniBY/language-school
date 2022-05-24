@@ -58,18 +58,26 @@ var $btnTop = document.querySelector('.btn__top');
 
 //to top-button click
 
-$btnTop.addEventListener('click', function(e){
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
+if ( $btnTop ) {
+
+    $btnTop.addEventListener('click', function(e){
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
     });
-});
+    
+}
 
 //appeare top-contacts and "toTop" button
 
-hatActive ();
+if ( $btnTop ) {
+    hatActive ();
     
-window.addEventListener('scroll', hatActive);
+    window.addEventListener('scroll', hatActive);
+}
+
+
 
 function hatActive() {
 
@@ -94,8 +102,12 @@ function hatActive() {
 // video control panel by click 
 
 const $videoBox = document.querySelector('.reviews__video-box');
-const $video = document.querySelector('video');
-$videoBox .addEventListener ('click', e => {
+
+if ($videoBox) {
+
+    const $video = document.querySelector('video');
+
+    $videoBox .addEventListener ('click', e => {
     $videoBox.classList.add('reviews__video-box_active');
     $video.play();
     $video.controls = "true";
@@ -104,6 +116,9 @@ $videoBox .addEventListener ('click', e => {
         $videoBox.classList.remove('reviews__video-box_active');
     });
 });
+
+}
+
 
 // footer year set
 
