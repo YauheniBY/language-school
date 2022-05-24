@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English LEVEL TEST (Quiz)</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,700&subset=latin,Cyrillic" rel="stylesheet"
+        type="text/css">
+    <link rel="stylesheet" href="./css/style_quiz.css" type="text/css">
+    <link rel="icon" href="./img/icons/favicon.ico" type="image/x-icon" sizes="32x32" >
+</head>
+<body>
+    <main class="wrapper">
+        <section class="quiz" id="quiz">
+            <div class="quiz__name">English level <span class="quiz__name_rose">test</span></div>  
+            <div class="quiz__progres" id="indicator">1/2</div>
+            <div class="quiz__questions-item" id="questions"></div>
+            <div class="quiz__result-item" id="results"></div>
+            <button class="quiz__btn-next" id="btnNext" disabled ><span class="quiz__btn-next-span"> Далее</span></button>
+
+            <div class="quiz__infoBlock">
+                <ul class="quiz__infoBlock_attentions">
+                    <li class="quiz__infoBlock_attention">*Тест не содержит проверку знаний по восприятию на слух и говорению.</li>
+                    <li class="quiz__infoBlock_attention">Бесплатно пройти проверку этих знаний, для более точного результата, вы можете на тестировании с преподавателем The English. </li>                     
+                </ul>
+                <div class="quiz__infoBlock_contacts">Телефон школы в Гомеле:</div>
+                <a href="tel:+375297979202" class="quiz__infoBlock_phone">+375 29 797-92-02</a>
+                <a class="quiz__btn-phone" href="tel:+375297979202"><span class="quiz__btn-phone-span">позвонить</span></a>
+                <div class="quiz__infoBlock_text">или</div>
+                <button class="quiz__btn-callback openform"><span class="quiz__btn-callback-span openform">Закзать звонок</span></button>
+
+            </div>
+            <div class="quiz__extra-links">
+                <button class="quiz__btn-restart" id="btnRestart"><span class="quiz__btn-restart-span"> Пройти тест заново</span></button>
+                <a href="/" target="_blank" class="quiz__link-to-main">Вернуться на главную страницу</a>
+            </div>
+            <div class="quiz__test-info"><span class="quiz__test-info-signal"></span> Правила прохождения теста
+                <ul class="quiz__test-ruls">
+                    <li class="quiz__test-rul">В тесте 50 вопросов.</li>
+                    <li class="quiz__test-rul">В каждом вопросе теста разрешено выбирать только один ответ.</li>
+                    <li class="quiz__test-rul">Время на выполнение 15 - 30 минут.</li>
+                    <li class="quiz__test-rul">Тестирование направлено на поверку уровня знаний лексики и грамматики английского языка от Beginner до Upper-Intermediate.</li>
+                    <button class="quiz__test-rul-btn">Ok</button>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <aside class="interaction">       
+        <section class="callback callback-pulse openform">
+            <h6 class="visually-hidden">Связаться</h6>
+            <img src="./img/icons/callBack.png" alt="кнопка обратной связи" class="callback__img">
+        </section>
+        <section class="mainform">
+            <h6 class="visually-hidden">Заказ звонка</h6>
+            <form action="#" class="mainform__box">
+                <h4 class="mainform__title">Заказ звонка</h4>
+                <div class="quest__form-border">
+                    <input type="tel" class="mainform__input  tel _req" placeholder="Ваш телефон" name="phone" id="mainform__input">
+                    <label for="mainform__input" class="mainform__label">Укажите ваш телефон в формате +375 ХХ ХХХ ХХ ХХ</label>   
+                    <input type="hidden" name="city" value="ГОМЕЛЬ">
+                    <input type="hidden" name="sort" value="Курсы английского">
+                    <button class="mainform__btn submit">Отправить</button>
+                </div>                    
+            </form>                     
+        </section>
+        <div class="sending"><div class="sending__message"></div></div> 
+    </aside>
+    <script type="module" src="./js/quiz.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/formsendler.js"></script> 
+</body>
+</html>

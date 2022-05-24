@@ -1,0 +1,38 @@
+@mixin font($size: 14px, $height: 18px, $weight:400, $style: normal ) {
+    font-size: $size;
+    line-height: $height;
+    font-weight: $weight;
+    font-style: $style;
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+@mixin desktop {
+    @media(max-width: $desktop-width){
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media(max-width: $tablet-width){
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media(max-width: $mobile-width){
+        @content;
+    }
+}
+
+@mixin landscape {
+    @media only screen 
+and (max-width: $desktop-width) 
+and (orientation : landscape){
+    @content;
+}
+}

@@ -96,6 +96,7 @@
         background: $rose;
         color:  $white;
         margin: auto auto 25px auto;
+        text-decoration: none;
 
         @include tablet {
             margin: 40px auto 25px auto;
@@ -107,6 +108,7 @@
         background: transparent;
         color:  $rose;
         margin: auto auto 25px auto;
+        transform: scale(1.02);
 
         @include tablet {
             margin: 40px auto 25px auto;
